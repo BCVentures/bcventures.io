@@ -10,8 +10,8 @@ import { imageRequire } from '../../utils/universalRequire';
 import { Layout, Row, Col, Menu } from 'antd';
 import Particles from 'react-particles-js';
 
-const { Header } = Layout;
-import isMobile from "ismobilejs"
+const { Header, Footer, Content } = Layout;
+import isMobile from "ismobilejs";
 // for the server return a reference to the
 // path for this image. Otherwise, deal with
 // it as a normal webpack import
@@ -19,7 +19,7 @@ import isMobile from "ismobilejs"
 export default class Home extends Component {
 
   render() {
-    const latLang = { lat: 37.4922503, lng: 126.9531732 };
+    const latLang = { lat: 37.47933877, lng: 126.95265278 };
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       <GoogleMap
         defaultZoom={15}
@@ -54,7 +54,7 @@ export default class Home extends Component {
 
           </Menu>
         </Header>
-        <div className="container-fluid">
+        <Content className="container-fluid">
           <div id="fullpage">
             <div className="section main">
               <div className="center">
@@ -103,7 +103,7 @@ export default class Home extends Component {
                       공개 원장을 활용한 투명성 확보
                     </div>
                   </Col>
-                  <Col  xs={24} md={8} className="item">
+                  <Col xs={24} md={8} className="item">
                     <img src={imageRequire('ic_trade.svg')} alt="icon_trade"/>
                     <div className="desc">
                       거래소에서 토큰 구입 가능<br/>
@@ -118,7 +118,7 @@ export default class Home extends Component {
                 params={{
                   "particles": {
                     "number": {
-                      "value": isMobile.any ? 40: 80,
+                      "value": isMobile.any ? 40 : 80,
                       "density": {
                         "enable": true,
                         "value_area": 700
@@ -350,7 +350,7 @@ export default class Home extends Component {
                 </Row>
               </div>
             </div>
-            <div className="section" id="roadmap" style={{display: "none"}}>
+            <div className="section" id="roadmap" style={{ display: "none" }}>
               <div className="title">GXC RoadMap</div>
               <div className="roadmap-list bottom">
                 <div className="hexagon">2018<br/>Q3</div>
@@ -362,7 +362,7 @@ export default class Home extends Component {
                 <div className="box left-bottom">제휴사 21사, MOU, 50개 게임 제휴</div>
               </div>
             </div>
-            <div className="section"  style={{display: "none"}}>
+            <div className="section" style={{ display: "none" }}>
               <div className="roadmap-list top">
                 <div className="hexagon-line"></div>
                 <div className="hexagon">2019<br/>Q2</div>
@@ -379,13 +379,20 @@ export default class Home extends Component {
                 <MapWithAMarker
                   googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFKYguZZb4aRjrOVL_l6NcFGmiaSc3mSc&v=3.exp&libraries=geometry,drawing,places"
                   loadingElement={<div style={{ height: `100%` }}/>}
-                  containerElement={<div style={{ margin: "50px auto", maxWidth: "960px", height: `400px` }}/>}
+                  containerElement={<div style={{ margin: "50px auto", maxWidth: "1024px", height: `580px` }}/>}
                   mapElement={<div style={{ height: `100%` }}/>}
                 />
               </div>
             </div>
           </div>
-        </div>
+        </Content>
+        <Footer style={{ textAlign: 'center', background: "#001529", color: "white" }}>
+          <p>주식회사 블록체인벤쳐스 | 대표: 김웅겸 | 서울 관악구 관악로 158 BS타워 3층<br/>
+            Contact: <a href="mailto:ceo@bcventures.io">ceo@bcventures.io</a>
+          </p>
+          <br/>
+          <p>Copyright © (C) blockchain ventures, All rights Reserved </p>
+        </Footer>
       </Layout>
     );
   }
