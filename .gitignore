@@ -7,4 +7,5 @@ test/encrypted/nodejs-docs-samples.json
 .idea/
 dist
 built
+views/base.marko.js
 tmp*

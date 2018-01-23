@@ -47,5 +47,5 @@ app.use(router.routes());
 app.use(renderReact());
 
 const server = app.listen(3000);
-//console.log(server.address())
-//console.log('Server listening on %s:%s', server.address().address, server.address().port);
+console.log(server.address())
+console.log('Server listening on %s:%s', server.address().address, server.address().port);

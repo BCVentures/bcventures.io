@@ -45,8 +45,8 @@ export function renderReact() {
         ctx.type = "text/html";
         ctx.body = markoTemplate.renderToString({
           html,
-          title: "koa-mobx-react-starter",
-          description: "Starter project for ReactJS, koa and the awesome MobX state management library.",
+          title: "GXC Game coin exchange",
+          description: "GXC Game coin exchange.",
           initialState: JSON.stringify(ctx.state.mobx),
         });
       } else {
