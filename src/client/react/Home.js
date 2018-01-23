@@ -19,7 +19,7 @@ import isMobile from "ismobilejs"
 export default class Home extends Component {
 
   render() {
-    const latLang = { lat: 37.4793532, lng: 126.9504463 };
+    const latLang = { lat: 37.4922503, lng: 126.9531732 };
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       <GoogleMap
         defaultZoom={15}
