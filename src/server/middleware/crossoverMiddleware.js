@@ -45,8 +45,8 @@ export function renderReact() {
         ctx.type = "text/html";
         ctx.body = markoTemplate.renderToString({
           html,
-          title: "GXC Game coin exchange",
-          description: "GXC Game coin exchange.",
+          title: "Blockchain Ventures",
+          description: "Blockchain Ventures - GXC Game coin exchange.",
           initialState: JSON.stringify(ctx.state.mobx),
         });
       } else {
