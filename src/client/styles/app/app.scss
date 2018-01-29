@@ -1,0 +1,334 @@
+body {
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  z-index: 3;
+  justify-content: space-between;
+  width: 100%;
+  .logo {
+    float: left;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-top: 20px;
+      margin-right: 5px;
+
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+@media (max-width: 576px) {
+  .only-desktop {
+    display: none;
+  }
+}
+.ant-layout-header {
+  height: 65px;
+}
+
+.section {
+  text-align: center;
+  padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh);
+}
+
+.center {
+  //position: relative;
+  //transform: translate(-50%, -50%);
+  //top: 50%;
+  //left: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  &.main {
+    .center {
+      position: relative;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    img.logo {
+      min-height: 20rem;
+      margin: 0 auto;
+    }
+
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &.mission {
+    padding: 50px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/static/images/carousel.png') no-repeat center;
+    background-size: cover;
+    color: white;
+    .header {
+      position: relative;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .contents {
+      font-size: 3rem;
+      margin: 88px auto;
+      font-weight: 400;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      p {
+        font-size: 1rem;
+        font-weight: 100;
+      }
+    }
+    .line {
+      display: inline-block;
+      border-bottom: 0.5rem solid white;
+      width: 2.5rem;
+    }
+  }
+}
+
+.project-bg {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.section {
+  &.project {
+    .contents {
+
+      .desc {
+        margin-top: 5rem;
+        color: gray;
+        font-weight: 200;
+        line-height: 1;
+      }
+    }
+    .diagrams {
+      padding-top: 3rem;
+      .desc {
+        margin-top: 1rem;
+      }
+    }
+  }
+  &.works {
+    .center {
+      width: 100%;
+      max-width: 80rem;
+      top: 40%;
+    }
+    .row {
+      //margin: 0 8rem;
+      //margin-top: 5rem;
+      .desc {
+        margin-top: 2rem;
+        color: gray;
+      }
+    }
+  }
+  &.team {
+    min-height: 830px;
+    .title {
+      width: 100%;
+      text-align: center;
+      /*max-width: 50rem;*/
+    }
+    .row {
+      &.col3 {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 3.5rem;
+      }
+      &.col4 {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        margin-top: 2.5rem;
+      }
+    }
+    img {
+      width: 7.5rem;
+    }
+    .item {
+      .line {
+        display: inline-block;
+        border-bottom: 0.3rem solid #0950a1;
+        width: 1.5rem;
+      }
+      .name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-top: 0.6rem;
+      }
+      .rank {
+        font-size: 0.8rem;
+      }
+      .desc {
+        font-size: 0.7rem;
+        color: gray;
+        ul {
+          list-style: none;
+          padding: 0;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+.hexagon {
+  background-image: url('/static/images/hexagon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  width: 7rem;
+  height: 8rem;
+  padding: 1.7rem 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  margin: 7rem 0;
+  z-index: 2;
+}
+
+.top .hexagon {
+  transform: translate(-50%, -85%);
+}
+
+.bottom .hexagon {
+}
+
+.hexagon-line {
+  border-left: 3px solid #0950a1;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  top: 75%;
+  z-index: 1;
+}
+
+.bottom .hexagon-line {
+  top: 80%;
+}
+
+.top .hexagon-line {
+  top: 10%;
+}
+
+.roadmap-list {
+}
+
+.box {
+  background-color: #ececec;
+  position: absolute;
+  padding: 3rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 30rem;
+}
+
+.left-top {
+  left: 10%;
+  top: 35%;
+}
+
+.left-bottom {
+  left: 10%;
+  top: 80%;
+}
+
+.right-center {
+  left: unset;
+  right: 10%;
+  top: 60%;
+}
+
+.right-top {
+  right: 10%;
+  top: 20%;
+}
+
+.left-center {
+  left: 10%;
+  top: 45%;
+}
+
+.right-bottom {
+  right: 10%;
+  top: 65%;
+}
+
+#map {
+  width: 80%;
+  height: 500px;
+  margin: 0px auto;
+}
+
+@media (max-width: 576px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .section {
+    padding-top: 30px;
+    height: auto;
+    &.main .center {
+      margin-top: 360px;
+    }
+    &.project .contents {
+      padding-top: 0;
+    }
+
+  }
+  .ant-layout-header {
+    padding: 0 15px;
+  }
+  .section.mission {
+    height: 600px;
+    .contents {
+      font-size: 1.2rem;
+    }
+
+  }
+  .contents {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .works {
+    .item {
+      margin-bottom: 20px;
+    }
+  }
+  .box {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem;
+    width: 20rem;
+  }
+  .hexagon-line {
+    display: none;
+  }
+}
