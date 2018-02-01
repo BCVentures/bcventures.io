@@ -5,13 +5,14 @@ import {
   GoogleMap,
   Marker,
 } from "react-google-maps";
+import isMobile from "ismobilejs";
+import Particles from 'react-particles-js';
 
 import { imageRequire } from '../../utils/universalRequire';
 import { Layout, Row, Col, Menu } from 'antd';
-import Particles from 'react-particles-js';
 
 const { Header, Footer, Content } = Layout;
-import isMobile from "ismobilejs";
+
 // for the server return a reference to the
 // path for this image. Otherwise, deal with
 // it as a normal webpack import

@@ -1,5 +1,6 @@
 body {
   font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  word-break: keep-all;
 }
 
 .container-fluid {
@@ -123,6 +124,8 @@ body {
         color: gray;
         font-weight: 200;
         line-height: 1;
+        word-break: keep-all;
+        line-height: 1.4;
       }
     }
     .diagrams {
@@ -296,13 +299,32 @@ body {
   .section {
     padding-top: 30px;
     height: auto;
-    &.main .center {
-      margin-top: 360px;
+    &.main {
+      .center {
+        margin-top: 360px;
+      }
     }
-    &.project .contents {
-      padding-top: 0;
+    &.project {
+      .contents {
+        padding-top: 0;
+      }
+      .diagrams {
+        .item:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
     }
-
+    &.works {
+      .item {
+        margin-bottom: 20px;
+      }
+    }
+    &.team {
+      .row.col3 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
   }
   .ant-layout-header {
     padding: 0 15px;
@@ -317,11 +339,6 @@ body {
   .contents {
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .works {
-    .item {
-      margin-bottom: 20px;
-    }
   }
   .box {
     font-size: 0.8rem;
